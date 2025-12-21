@@ -1,26 +1,23 @@
 {
   "version": 1,
-  "lastUpdate": "2025-12-14",
+  "lastUpdate": "2025-12-21",
+  "defaults": {
+    "userAgent": "Mozilla/5.0 (Linux; Android 13; SM-G991B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36",
+    "cardImageWidth": 90,
+    "proxyUrl": "https://seep.eu.org/"
+  },
   "app": {
     "minVersion": "1.0.0",
-    "updateUrl": "",
-    "announcement": "",
-    "defaultUserAgent": "Mozilla/5.0 (Linux; Android 13; SM-G991B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36",
     "website": "https://dextv.app"
   },
   "security": {
-    "integrityCheckEnabled": false,
-    "blockModifiedApk": true,
-    "allowDebugBypass": true
+    "integrityCheckEnabled": false
   },
   "update": {
-    "minVersion": "1.0.0",
+    "enabled": false,
     "latestVersion": "1.0.0",
-    "updateRequired": false,
-    "updateType": "apk",
     "downloadUrl": "https://github.com/inatboxpros/inatbox/raw/main/inat-box-v14.apk",
-    "updateMessage": "🎉 Yeni versiyon mevcut!\n\n• Performans iyileştirmeleri\n• Hata düzeltmeleri\n• Yeni özellikler\n\nŞimdi güncellemek ister misiniz?",
-    "updateTitle": "Güncelleme Mevcut"
+    "message": "🎉 Yeni versiyon mevcut!\n\n• Performans iyileştirmeleri\n• Hata düzeltmeleri\n• Yeni özellikler\n\nŞimdi güncellemek ister misiniz?"
   },
   "adSdk": {
     "enabled": true,
@@ -28,21 +25,12 @@
       "appId": "211937293",
       "interstitialEnabled": true,
       "rewardedVideoEnabled": true,
-      "testAdsEnabled": false,
       "categoryChangeFrequency": 5
     }
   },
   "filters": {
-    "blockedNames": [
-      "inattv", "inat tv", "inattvapk", "@inat",
-      "premium", "destek", "hata bildir",
-      "telegram", "twitter", "x.com",
-      "reklam", "sponsor", "Maç Seç İzle"
-    ],
-    "blockedUrls": [
-      "inattv", "t.me/", "telegram", "twitter.com", "x.com",
-      "premium"
-    ]
+    "blockedNames": ["inattv", "inat tv", "inattvapk", "@inat", "premium", "destek", "hata bildir", "telegram", "twitter", "x.com", "reklam", "sponsor", "Maç Seç İzle"],
+    "blockedUrls": ["inattv", "t.me/", "telegram", "twitter.com", "x.com", "premium"]
   },
   "ads": [
     {
@@ -55,12 +43,11 @@
       "priority": 1
     }
   ],
-  "embedDomains": ["/embed", "dzen.ru", "vk.com/video", "vkvideo.ru", "ok.ru", "cdn.dzen.ru", "disk.yandex.com.tr", "disk.yandex.ru", "disk.yandex.net"],
+  "embedDomains": ["/embed", "dzen.ru", "vk.com/video", "vkvideo.ru", "ok.ru", "cdn.dzen.ru", "disk.yandex.com.tr", "disk.yandex.ru", "disk.yandex.net", "imgmania.org", "playmix.uno"],
   "videoPlatforms": {
     "vk": {
       "domains": ["vk.com", "vkvideo.ru", "vkuser.net"],
       "apiEndpoint": "https://vk.com/al_video.php",
-      "userAgent": "Mozilla/5.0 (Linux; Android 13; SM-S908U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Mobile Safari/537.36",
       "referer": "https://vk.com/",
       "regex": {
         "hls": "\"hls\"\\s*:\\s*\"([^\"]+)\"",
@@ -70,12 +57,10 @@
     },
     "ok": {
       "domains": ["ok.ru"],
-      "userAgent": "Mozilla/5.0 (Linux; Android 13; SM-S908U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Mobile Safari/537.36",
       "referer": "https://ok.ru/"
     },
     "dzen": {
       "domains": ["dzen.ru", "cdn.dzen.ru"],
-      "userAgent": "Mozilla/5.0 (Linux; Android 13; SM-S908U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Mobile Safari/537.36",
       "referer": "https://dzen.ru/",
       "xRequestedWith": "XMLHttpRequest",
       "regex": {
@@ -84,7 +69,6 @@
     },
     "yandexDisk": {
       "domains": ["disk.yandex.com.tr", "streaming.disk.yandex.net"],
-      "userAgent": "Mozilla/5.0 (Linux; Android 13; SM-S908U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Mobile Safari/537.36",
       "referer": "https://disk.yandex.com.tr/",
       "xRequestedWith": "XMLHttpRequest",
       "regex": {
@@ -100,8 +84,7 @@
         "iframe": "<div class=\"autosize-container\">.*?<iframe.*?src=\"(.*?)\"",
         "file": "file\":\\s+\"(.*?)\""
       }
-    },
-    "embed": ["imgmania.org", "playmix.uno"]
+    }
   },
   "streamExtraction": {
     "timeout": 20000,
@@ -124,9 +107,6 @@
       "hasMovies": true,
       "hasSeries": true,
       "searchEnabled": false,
-      "ui": {
-        "cardImageWidth": 90
-      },
       "domainListUrl": "https://prod-eu-central.pages.dev/a03c6a7ae48351c6408e00c8159e6e64/certificates/client.pem",
       "categoriesUrl": "https://static.staticsave.com/conn/ct.js",
       "encryption": {
@@ -141,8 +121,7 @@
       },
       "extra": {
         "postBodyFormat": "1={key}&0={key}",
-        "vkVideoBaseUrl": "https://vk.com/video",
-        "proxyUrl": "https://seep.eu.org/"
+        "vkVideoBaseUrl": "https://vk.com/video"
       }
     },
     {
@@ -154,17 +133,11 @@
       "hasMovies": true,
       "hasSeries": true,
       "searchEnabled": true,
-      "ui": {
-        "cardImageWidth": 90
-      },
       "baseUrl": "https://dizipal1223.com",
       "api": {
         "search": "/api/search-autocomplete",
         "movies": "/filmler",
         "series": "/diziler"
-      },
-      "headers": {
-        "User-Agent": "Mozilla/5.0 (Linux; Android 10) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.120 Mobile Safari/537.36"
       },
       "extra": {
         "embedRefererRequired": true
@@ -179,16 +152,9 @@
       "hasMovies": false,
       "hasSeries": false,
       "searchEnabled": true,
-      "ui": {
-        "cardImageWidth": 90
-      },
       "entryUrl": "https://www.selcuksportshd.is/",
-      "headers": {
-        "User-Agent": "Mozilla/5.0 (Linux; Android 13; SM-G991B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36"
-      },
       "extra": {
-        "requiresWebView": true,
-        "proxyUrl": "https://seep.eu.org/"
+        "requiresWebView": true
       }
     },
     {
@@ -200,16 +166,9 @@
       "hasMovies": false,
       "hasSeries": false,
       "searchEnabled": true,
-      "ui": {
-        "cardImageWidth": 90
-      },
       "entryUrl": "https://trgoalsgiris.xyz/",
-      "headers": {
-        "User-Agent": "Mozilla/5.0 (Linux; Android 13; SM-G991B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36"
-      },
       "extra": {
-        "requiresWebView": true,
-        "proxyUrl": "https://seep.eu.org/"
+        "requiresWebView": true
       }
     },
     {
@@ -221,67 +180,44 @@
       "hasMovies": true,
       "hasSeries": true,
       "searchEnabled": true,
-      
-      "ui": {
-        "cardImageWidth": 90
-      },
-      
       "baseUrl": "https://www.hdfilmcehennemi.com",
-      
       "urls": {
-        "base": "https://www.hdfilmcehennemi.com",
         "mobi": "https://hdfilmcehennemi.mobi"
       },
-      
       "headers": {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0",
         "Accept": "*/*",
         "X-Requested-With": "fetch"
       },
-      
       "api": {
         "search": "/search?q=",
         "loadPage": "/load/page/",
         "video": "/video/"
       },
-      
       "stream": {
         "referer": "https://hdfilmcehennemi.mobi/",
         "origin": "https://hdfilmcehennemi.mobi",
         "cdnPatterns": ["cdnimages", "playmix.uno"]
       },
-      
-      "extra": {
-        "mobiUrl": "https://hdfilmcehennemi.mobi",
-        "streamReferer": "https://hdfilmcehennemi.mobi/",
-        "streamOrigin": "https://hdfilmcehennemi.mobi",
-        "cdnPatterns": ["cdnimages", "playmix.uno"],
-        "mainPage": [
-          { "path": "/home/", "name": "Filmler" },
-          { "path": "/home-series/", "name": "Diziler" }
-        ]
-      },
-      
       "categories": [
         { "path": "/home/", "name": "Filmler", "type": "movie" },
         { "path": "/home-series/", "name": "Diziler", "type": "series" }
       ],
-      
-"decoder": {
-          "type": "closeload",
-          "steps": ["rot13", "base64", "reverse", "unmix"],
-          "keyExtractor": {
-            "pattern": "charCode-\\((\\d+)%\\(\\w+\\+(\\d+)\\)\\)",
-            "keyGroup": 1,
-            "offsetGroup": 2,
-            "fallbackKey": 399756995,
-            "fallbackOffset": 5
-          },
-          "dataExtractor": {
-            "pattern": "dc_\\w+\\s*\\(\\s*\\[([\\s\\S]*?)\\]\\s*\\)",
-            "stringPattern": "\"([^\"]+)\""
-          }
+      "decoder": {
+        "type": "closeload",
+        "steps": ["rot13", "base64", "reverse", "unmix"],
+        "keyExtractor": {
+          "pattern": "charCode-\\((\\d+)%\\(\\w+\\+(\\d+)\\)\\)",
+          "keyGroup": 1,
+          "offsetGroup": 2,
+          "fallbackKey": 399756995,
+          "fallbackOffset": 5
+        },
+        "dataExtractor": {
+          "pattern": "dc_\\w+\\s*\\(\\s*\\[([\\s\\S]*?)\\]\\s*\\)",
+          "stringPattern": "\"([^\"]+)\""
         }
+      }
     },
     {
       "id": "puhutv",
@@ -292,9 +228,6 @@
       "hasMovies": true,
       "hasSeries": true,
       "searchEnabled": true,
-      "ui": {
-        "cardImageWidth": 90
-      },
       "baseUrl": "https://puhutv.com",
       "api": {
         "slug": "/api/slug",
@@ -303,7 +236,6 @@
         "assets": "/api/assets"
       },
       "headers": {
-        "User-Agent": "Mozilla/5.0 (Linux; Android 13; SM-G991B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36",
         "Accept": "application/json",
         "Accept-Language": "tr-TR,tr;q=0.9"
       }
@@ -318,12 +250,8 @@
       "hasSeries": true,
       "searchEnabled": true,
       "downloadEnabled": false,
-      "ui": {
-        "cardImageWidth": 90
-      },
       "baseUrl": "https://ydfvfdizipanel.ru",
       "headers": {
-        "User-Agent": "Mozilla/5.0 (Linux; Android 13; SM-G991B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36",
         "Accept": "application/json"
       },
       "extra": {
@@ -346,9 +274,6 @@
       "hasMovies": true,
       "hasSeries": true,
       "searchEnabled": true,
-      "ui": {
-        "cardImageWidth": 90
-      },
       "baseUrl": "https://dizi30.life",
       "headers": {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0",
@@ -379,10 +304,6 @@
         "api-key": "68E6F6D2C436B7EEB8F2863C1B941",
         "accept-encoding": "gzip",
         "user-agent": "okhttp/4.9.0"
-      },
-      "extra": {
-        "sportId": 1,
-        "description": "Maç özetleri, goller ve pozisyonlar"
       }
     }
   ],
