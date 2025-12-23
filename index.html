@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEX TV </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0D0D0D;
+            color: #FFFFFF;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 480px;
+            width: 100%;
+        }
+
+        .logo {
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+
+        .logo-dex {
+            color: #E50914;
+        }
+
+        .logo-tv {
+            color: #FFFFFF;
+        }
+
+        .version {
+            text-align: center;
+            font-size: 14px;
+            color: #B3B3B3;
+            margin-bottom: 48px;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            padding: 16px 24px;
+            margin-bottom: 12px;
+            background: #1A1A1A;
+            color: #FFFFFF;
+            text-decoration: none;
+            border-radius: 12px;
+            font-size: 15px;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
+
+        .btn:hover {
+            background: #252525;
+            transform: translateY(-1px);
+        }
+
+        .btn-primary {
+            background: #B81D24;
+        }
+
+        .btn-primary:hover {
+            background: #C92128;
+            transform: translateY(-1px);
+        }
+
+        .btn-telegram {
+            background: #1A1A1A;
+            border: 1px solid #252525;
+        }
+
+        .btn-telegram:hover {
+            background: #252525;
+            transform: translateY(-1px);
+        }
+
+        .btn-disabled {
+            background: #1A1A1A;
+            color: #5C5C5C;
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+        .btn-disabled:hover {
+            background: #1A1A1A;
+        }
+
+        .btn-subtitle {
+            font-size: 12px;
+            color: #B3B3B3;
+            font-weight: 400;
+            margin-top: 4px;
+            display: block;
+        }
+
+        .btn-disabled .btn-subtitle {
+            color: #5C5C5C;
+        }
+
+        .badge-soon {
+            display: inline-block;
+            background: #5C5C5C;
+            color: #fff;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 10px;
+            font-weight: 700;
+            margin-left: auto;
+            text-transform: uppercase;
+        }
+
+        .divider {
+            height: 1px;
+            background: #252525;
+            margin: 24px 0;
+        }
+
+        .footer {
+            margin-top: 48px;
+            padding: 24px;
+            background: #1A1A1A;
+            border-radius: 12px;
+        }
+
+        .footer-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #FFFFFF;
+            margin-bottom: 12px;
+        }
+
+        .footer-text {
+            font-size: 12px;
+            line-height: 1.6;
+            color: #8C8C8C;
+            margin-bottom: 12px;
+        }
+
+        .footer-email {
+            color: #E50914;
+            text-decoration: none;
+        }
+
+        .footer-email:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 480px) {
+            .logo {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo"><span class="logo-dex">DEX</span> <span class="logo-tv">TV</span></div>
+        <div class="version">Versiyon 1.0.0</div>
+
+        <a href="#" class="btn btn-primary" id="arm64-download">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+            </svg>
+            Android 8.0 ve Üstü
+        </a>
+
+        <a href="#" class="btn btn-primary" id="arm7-download">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+            </svg>
+            Android 5.0 - 7.1
+        </a>
+
+        <div class="btn btn-disabled">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+            </svg>
+            Android TV / Box
+            <span class="badge-soon">Yakında</span>
+        </div>
+
+        <div class="divider"></div>
+
+        <a href="https://t.me/dextvapp" class="btn btn-telegram" target="_blank">
+            <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/>
+            </svg>
+            Telegram Duyuru Kanalı
+        </a>
+
+        <div class="footer">
+            <div class="footer-title">İletişim</div>
+            <p class="footer-text">
+                DEX TV, 5651 sayılı yasanın 5. maddesinde tanımlanan yer sağlayıcı olarak hizmet vermektedir.
+                İlgili yasaya göre, web site yönetiminin hukuka aykırı içerikleri kontrol etme yükümlülüğü yoktur.
+                Bu sebeple, uygulamamız uyar ve kaldır prensibini benimsemiştir.
+            </p>
+            <p class="footer-text">
+                Telif hakkına konu olan eserlerin yasal olmayan bir biçimde paylaşıldığını ve yasal haklarının
+                çiğnendiğini düşünen hak sahipleri veya meslek birlikleri,
+                <a href="mailto:dextvapp@protonmail.com" class="footer-email">dextvapp@protonmail.com</a>
+                mail adresinden bize ulaşabilirler. Buraya ulaşan talep ve şikayetler hukuksal olarak incelenecek,
+                şikayet yerinde görüldüğü takdirde, ihlal olduğu düşünülen içerikler uygulamamızdan kaldırılacaktır.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('arm64-download').href = 'https://github.com/dextvapp/json/releases/download/APK/app-arm64-v8a-release.apk';
+
+        document.getElementById('arm7-download').href = 'https://github.com/dextvapp/json/releases/download/APK/app-armeabi-v7a-release.apk';
+    </script>
+</body>
+</html>
