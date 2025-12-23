@@ -8,7 +8,7 @@
   },
   "app": {
     "minVersion": "1.0.0",
-    "website": "https://dextv.app"
+    "website": "https://dextvapp.github.io/apk/"
   },
   "update": {
     "enabled": false,
