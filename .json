@@ -300,7 +300,7 @@
       "hasLiveTV": true,
       "hasMovies": false,
       "hasSeries": false,
-      "searchEnabled": true,
+      "searchEnabled": false,
       "baseUrl": "https://www.oha.to",
       "headers": {
         "User-Agent": "Rokkr/1.7.2 (android)",
