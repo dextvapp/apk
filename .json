@@ -193,20 +193,20 @@
       }
     },
     {
-    "id": "trgoals",
-    "name": "TRGoals",
-    "enabled": true,
-    "type": "trgoals",
-    "hasLiveTV": true,
-    "hasMovies": false,
-    "hasSeries": false,
-    "searchEnabled": true,
-    "entryUrl": "https://trgoalsgiris.xyz/",
-    "extra": {
-      "requiresWebView": true,
-      "dynamicDomainUrl": "https://docs.google.com/spreadsheets/d/1IHYlgjzhLCX3MKhewg7FGTf_oIkNlXzl2ogYXkSRjFM/export?format=csv"
-    }
-  },
+      "id": "trgoals",
+      "name": "TRGoals",
+      "enabled": true,
+      "type": "trgoals",
+      "hasLiveTV": true,
+      "hasMovies": false,
+      "hasSeries": false,
+      "searchEnabled": true,
+      "entryUrl": "https://trgoalsgiris.xyz/",
+      "extra": {
+        "requiresWebView": true,
+        "dynamicDomainUrl": "https://docs.google.com/spreadsheets/d/1IHYlgjzhLCX3MKhewg7FGTf_oIkNlXzl2ogYXkSRjFM/export?format=csv"
+      }
+    },
     {
       "id": "hdfilmcehennemi",
       "name": "HD Film Cehennemi",
@@ -406,6 +406,37 @@
       "headers": {
         "User-Agent": "Rokkr/1.7.2 (android)",
         "Content-Type": "application/json"
+      }
+    },
+    {
+      "id": "dizilla",
+      "name": "Dizilla",
+      "enabled": true,
+      "type": "dizilla",
+      "hasLiveTV": false,
+      "hasMovies": false,
+      "hasSeries": true,
+      "searchEnabled": true,
+      "baseUrl": "https://dizilla40.com",
+      "encryption": {
+        "type": "aes",
+        "algorithm": "AES/CBC/PKCS5Padding",
+        "key": "9bYMCNQiWsXIYFWYAu7EkdsSbmGBTyUI",
+        "iv": "0000000000000000"
+      },
+      "api": {
+        "search": "/api/bg/searchcontent",
+        "findSeries": "/api/bg/findSeries"
+      },
+      "headers": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+        "Content-Type": "application/json"
+      },
+      "extra": {
+        "domainReplacement": {
+          "from": "sn.dplayer74.site",
+          "to": "sn.hotlinger.com"
+        }
       }
     }
   ],
