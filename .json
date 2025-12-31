@@ -407,6 +407,19 @@
       "headers": {
         "User-Agent": "Rokkr/1.7.2 (android)",
         "Content-Type": "application/json"
+      },
+    {
+      "id": "diziyou",
+      "name": "Diziyou",
+      "enabled": true,
+      "type": "custom",
+      "hasLiveTV": false,
+      "hasMovies": false,
+      "hasSeries": true,
+      "searchEnabled": true,
+      "baseUrl": "https://www.diziyou.one",
+      "urls": {
+        "base": "https://www.diziyou.one"
       }
     }
   ],
