@@ -325,7 +325,7 @@
       "extra": {
         "apiKey": "9iQNC5HQwPlaFuJDkhncJ5XTJ8feGXOJatAA",
         "hash256": "711bff4afeb47f07ab08a0b07e85d3835e739295e8a6361db77eebd93d96306b",
-        "signature": "3082058830820370a00302010202145bbfbba9791db758ad12295636e094ab4b07dc24300d06092a864886f70d01010b05003074310b30090603550406130255533113301106035504080c0a43616c69666f726e69613116301406035504070c0d4d6f756e7461696e205669657731143012060355040a0c0b476f6f676c6520496e632e3110300e060355040b0c07416e64726f69643110300e06035504030c07416e64726f696430...truncated"
+        "signature": "3082058830820370a00302010202145bbfbba9791db758ad12295636e094ab4b07dc24300d06092a864886f70d01010b05003074310b30090603550406130255533113301106035504080c0a43616c69666f726e6961311630[...]"
       },
       "categories": [
         {
@@ -407,7 +407,8 @@
       "headers": {
         "User-Agent": "Rokkr/1.7.2 (android)",
         "Content-Type": "application/json"
-      },
+      }
+    },
     {
       "id": "diziyou",
       "name": "Diziyou",
@@ -422,6 +423,6 @@
         "base": "https://www.diziyou.one"
       }
     }
-  ]
+  ],
   "defaultProvider": "inatbox"
 }
