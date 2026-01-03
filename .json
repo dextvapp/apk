@@ -426,6 +426,25 @@
       "urls": {
         "base": "https://www.diziyou.one"
       }
+    },
+    {
+      "id": "filmmodu",
+      "name": "FilmModu",
+      "enabled": true,
+      "type": "filmmodu",
+      "hasLiveTV": false,
+      "hasMovies": true,
+      "hasSeries": false,
+      "searchEnabled": true,
+      "urls": {
+        "base": "https://www.filmmodu.ws"
+      },
+      "headers": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+      },
+      "api": {
+        "getSource": "/get-source"
+      }
     }
   ],
   "defaultProvider": "inatbox"
